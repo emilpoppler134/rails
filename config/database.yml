@@ -1,0 +1,10 @@
+# config/database.yml
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: sigge
+  username: root
+  password: 
+  host: localhost
+  port: 3306 # Default MySQL port

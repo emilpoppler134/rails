@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigge</title>
+  <%= stylesheet_link_tag 'login' %>
+</head>
+<body id="login">
+  <div id="root">
+    <main class="main">
+      <div class="login">
+        <div class="logo">
+          <span>Sigge</span>
+        </div>
+        <div class="ui-heading">
+          <h2>Log in</h2>
+          <h3>with your google account</h3>
+        </div>
+        <div class="login-btn">
+          <img src="<%= asset_path('google-logo.png') %>" alt="google logo">
+          <span>Sign in with Google</span>
+          <%=button_to "", "/auth/google_oauth2", method: :post, data: {turbo: "false"}, class: "overlay" %>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

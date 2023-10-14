@@ -1,0 +1,202 @@
+.title {
+  padding: 30px 0;
+}
+
+.title span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+}
+
+.board-title-list {
+  display: flex;
+}
+
+.board-title-list span {
+  font-size: 16px;
+  color: #4f4f4f;
+}
+
+span.board-title {
+  font-size: 22px;
+}
+
+.board-title.purple {
+  color: #936fda;
+}
+
+.board-title.blue {
+  color: #699df6;
+}
+
+.list {
+  margin-top: 10px;
+}
+
+.item {
+  position: relative;
+  padding: 2px;
+}
+
+.task {
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+.task > * {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+  margin: 0 2px;
+  font-size: 17px;
+  background-color: #f5f6f8;
+}
+
+.name-container {
+  position: relative;
+  width: 40%;
+  padding: 0;
+  margin-left: 0;
+}
+
+.task-name-input {
+  width: 100%;
+  font-size: 17px;
+  padding: 5px;
+  margin: 0 10px;
+  border: 2px solid transparent;
+  outline: none;
+  background-color: #00000000;
+  color: var(--fg-color);
+}
+
+.task-name-input:focus {
+  border: 2px dotted #dbdbdb;
+}
+
+.name-container:hover .task-underline, .task-name-input:focus ~ .task-underline {
+  width: 100%;
+}
+
+.task-underline {
+  width: 0%;
+  height: 4px;
+  background-color: #e7e7e7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 1s;
+}
+
+.line {
+  display: block;
+  width: 4px;
+  height: 100%;
+}
+
+.line.purple {
+  background-color: #936fda;
+}
+
+.line.blue {
+  background-color: #699df6;
+}
+
+.task-name {
+  margin-left: 10px;
+}
+
+.timeline {
+  position: relative;
+  width: 40%;
+}
+
+.progress {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.progress-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #161831;
+}
+
+.progress-fg {
+  width: 0%;
+  height: 100%;
+  background-color: #5fb9de;
+}
+
+.timeline .tooltip {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #434b50;
+  line-height: 14px;
+  transition: .5s;
+  pointer-events: none;
+}
+
+.timeline .tooltip span {
+  font-size: 14px;
+  color: rgb(255 255 255 / 75%);
+}
+
+.progress:hover ~ .tooltip {
+  opacity: 1;
+}
+
+.status-btn {
+  width: 20%;
+}
+
+.status-btn {
+  justify-content: center;
+  color: #fff;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.status-container {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 20%;
+  margin: 0 2px;
+  
+  opacity: 0;
+  pointer-events: none;
+}
+
+.status-item {
+  width: 100%;
+  height: 50px;
+}
+
+.status-item-btn {
+  width: 100%;
+  height: 100%;
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
