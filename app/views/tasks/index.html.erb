@@ -70,16 +70,16 @@
               <li class="item">
                 <div class="task">
                   <div class="name-container">
-                    <span class="line blue"></span>
+                    <span class="line purple"></span>
                     <span class="task-name"><%= task.task %></span>
                   </div>
                   <div class="timeline">
                     <div class="progress">
                       <span class="progress-bg overlay"></span>
-                      <span class="progress-fg overlay" style="width: 75%"></span>
+                      <span class="progress-fg overlay" style="width: <%= task.percentage_complete %>%"></span>
                     </div>
                     <div class="tooltip">
-                      <span>7 Days left</span>
+                      <span><%= task.days_left %> Days left</span>
                     </div>
                   </div>
                   <button class="status-btn change-status-button" data-id="<%= task.id %>" style="background-color: <%= task.status.color %>;"><%= task.status.name %></button>  
@@ -127,10 +127,10 @@
                 <div class="timeline">
                   <div class="progress">
                     <span class="progress-bg overlay"></span>
-                    <span class="progress-fg overlay" style="width: 75%"></span>
+                    <span class="progress-fg overlay" style="width: <%= task.percentage_complete %>%"></span>
                   </div>
                   <div class="tooltip">
-                    <span>7 Days left</span>
+                    <span><%= task.days_left %> Days left</span>
                   </div>
                 </div>
                 <button class="status-btn change-status-button" data-id="<%= task.id %>" style="background-color: <%= task.status.color %>;"><%= task.status.name %></button>  
