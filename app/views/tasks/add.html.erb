@@ -42,8 +42,29 @@
       </div>
     </nav>
     <main>
-      <div class="content hidden">
+      <div class="content">
+        <h1>Add a New Task</h1>
+
+        <%= form_for @task do |f| %>
+          <div class="field">
+            <%= f.label :task %>
+            <%= f.text_field :task %>
+          </div>
         
+          <div class="field">
+            <%= f.label :status_ID %>
+            <%= f.collection_select(:status_ID, Status.all, :id, :name, prompt: 'Select a status') %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :deadline %>
+            <%= f.date_field :deadline %>
+          </div>
+        
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
       </div>
     </main>
     <footer></footer>

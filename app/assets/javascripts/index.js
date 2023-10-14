@@ -5,7 +5,7 @@ document.addEventListener('readystatechange', event => {
   }
 })
 
-document.querySelector(".change-status-button").addEventListener("click", onShowStatusList);
+document.querySelectorAll(".change-status-button").forEach(btn => btn.addEventListener("click", onShowStatusList));
 
 const status_item_buttons = document.querySelectorAll(".status-item-btn");
 status_item_buttons.forEach(btn => {

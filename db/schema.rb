@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_13_224547) do
     t.string "id", null: false
     t.string "task", null: false
     t.string "status_ID", null: false
-    t.string "user_id", null: false
+    t.string "user_id", null: true
     t.timestamp "deadline", null: false
     t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end

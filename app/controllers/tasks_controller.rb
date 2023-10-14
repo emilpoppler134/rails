@@ -27,6 +27,7 @@ class TasksController < ApplicationController
   end
 
   def add
+    @task = Task.new
   end
 
   def update
@@ -37,5 +38,22 @@ class TasksController < ApplicationController
     else
       render json: { error: 'Failed to update task status' }, status: :unprocessable_entity
     end
+  end
+
+  def create
+    @task = Task.new(task_params)
+    @task.id = SecureRandom.uuid
+
+    if @task.save
+      redirect_to '/'
+    else
+      redirect_to '/add'
+    end
+  end
+  
+  private
+  
+  def task_params
+    params.require(:task).permit(:task, :status_ID, :deadline)
   end
 end

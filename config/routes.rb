@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/add', to: 'tasks#add'
 
-  resources :tasks, only: [:index, :update]
+  resources :tasks, only: [:index, :new, :update, :create]
   
   # Google OAuth2 routes
   get '/auth/:provider/callback' => 'sessions#omniauth'
