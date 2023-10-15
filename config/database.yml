@@ -1,6 +1,6 @@
 # config/database.yml
 
-development:
+production:
   adapter: mysql2
   encoding: utf8
   database: heroku_03828a087c0ddba
