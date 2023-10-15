@@ -3,8 +3,8 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: sigge
-  username: root
-  password: 
-  host: localhost
-  port: 3306 # Default MySQL port
+  database: heroku_03828a087c0ddba
+  host: eu-cdbr-west-03.cleardb.net
+  port: 3306
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
