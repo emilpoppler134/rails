@@ -1,24 +1,19 @@
-# README
+# Sigge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Description
 
-Things you may want to cover:
+This is a simple todo web application that I coded in a week. You login with a google account and then you can view & add tasks.
 
-* Ruby version
+## Issues
+There is no middleware and the add page has no css
 
-* System dependencies
+## Live Website
 
-* Configuration
+You can access a live version of this project on Heroku:
 
-* Database creation
+[Live Demo](https://sigge-26a20bd4f58a.herokuapp.com/login)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Prerequisites
+```bash
+Ruby version 3.1.2p20
+Rails version 7.1.0
